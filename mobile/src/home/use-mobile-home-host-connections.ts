@@ -27,7 +27,9 @@ const HOME_WORKTREE_REFRESH_MIN_INTERVAL_MS = 3000
 const WORKTREE_CHANGE_EVENTS: ReadonlySet<string> = new Set([
   'sidebarInputsChanged',
   'worktreesChanged',
-  'reposChanged'
+  'reposChanged',
+  // Agent status changes on hosts without the sidebar feed (worktree.rows-changed-event.v1).
+  'worktreeRowsChanged'
 ])
 
 export type HomeAccountsSetter = (
